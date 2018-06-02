@@ -7,6 +7,12 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('db');
+  this.route('gov');
+  this.route('nari');
+  this.route('example');
+  this.route('allocation');
+  this.route('track');
 });
 
 export default Router;

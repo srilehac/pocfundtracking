@@ -1,0 +1,119 @@
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://cijulenlinea.ucr.ac.cr/dev-users/">
+               
+            </a>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+
+                
+                      
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav" style="margin-left:-227px;margin-top:-10px">
+                <li>
+                    <a href="db" data-toggle="collapse" data-target="#submenu-1"> <i class="glyphicon glyphicon-home">  </i>   DASHBOARD </a>
+                   
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-star"></i>  SCHEMES<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-2" class="collapse">
+                        <li><a href="agriculture"><i class="fa fa-angle-double-right"></i> AGRICULTURE</a></li>
+                        <li><a href="education"><i class="fa fa-angle-double-right"></i> EDUCATION</a></li>
+                        <li><a href="nari"><i class="fa fa-angle-double-right"></i> NARI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="allocation"><i class="fa fa-fw fa-user-plus"></i>  ALLOCATIONS</a>
+                </li>
+                <li>
+                    <a href="track"><i class="fa fa-fw fa-paper-plane-o"></i> TRACK</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-12 col-md-12 well" id="content">
+                    <h1><center><u>Government Of Maharashtra</u></center></h1>
+                    
+                    <div class="img2">
+                        
+                        <img src="/assets/NARI.v2.jpeg"/>
+  
+</div>
+
+                           <div class="img3">
+                                 <img src="/assets/women.v1.jpeg"/>
+
+                                 
+                       
+                        </div>
+                    </div>
+
+<div id="slideshow">
+   <div>
+     <img src="/assets/aa.jpg">
+   </div>
+   <div>
+     <img src="/assets/bb.jpg">
+   </div>
+   <div>
+     <img src="/assets/cc.jpg">
+   </div>
+   <div>
+     <img src="/assets/dd.jpg">
+   </div>
+    <div>
+     <img src="/assets/ee.jpg">
+   </div>
+</div>
+
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+
+
+<script>
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+</script>

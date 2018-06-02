@@ -1,0 +1,156 @@
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://cijulenlinea.ucr.ac.cr/dev-users/">
+               
+            </a>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">           
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav" style="margin-left:-227px;margin-top:-10px">
+                <li>
+                    <a href="db" data-toggle="collapse" data-target="#submenu-1"> <i class="glyphicon glyphicon-home">  </i>   DASHBOARD </a>
+                   
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-star"></i>  SCHEMES<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-2" class="collapse">
+                        <li><a href="agriculture"><i class="fa fa-angle-double-right"></i> AGRICULTURE</a></li>
+                        <li><a href="education"><i class="fa fa-angle-double-right"></i> EDUCATION</a></li>
+                        <li><a href="nari"><i class="fa fa-angle-double-right"></i> NARI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="allocation"><i class="fa fa-fw fa-user-plus"></i>  ALLOCATIONS</a>
+                </li>
+                <li>
+                    <a href="track"><i class="fa fa-fw fa-paper-plane-o"></i> TRACK</a>
+                </li>
+               
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-12 col-md-12 well" id="content">
+                    <h1><center><u>GOVERNMENT OF MAHARASHTRA</u></center></h1>
+                
+                           
+                        
+<div>
+
+
+ {{!-- <label>DEPARTMENTS</label> --}}
+ 
+ {{!-- {{input  type="depart" style="width=8;height=10" valueBinding ='Depart' class="form-control" }}<br>
+  --}}
+   <div class="form-group">
+              <label class="col-sm-2 control-label"  for="name">DEPARTMENTS :</label>
+              <div class="col-md-9">
+                {{input id="name" name="name" type="text" valueBinding='Departs' class="form-control"}}
+              </div>
+            </div><br><br><br>
+
+	<div class="col-sm-10 column">
+			<table class="table table-bordered table-hover" style="margin-left:25.08px" id="tab_logic">
+                <tbody>
+					<tr id='addr0'>
+						<td>SCHEMES :</td>
+						<td>
+						{{input type="scheme" name='name[]'  valueBinding='Scheme' class="form-control"}}
+						</td>
+						<td>
+						{{input type="scheme" name='mail[]' valueBinding='Scheme' class="form-control"}}
+						</td>
+						<td>
+						{{input type="scheme" name='mobile[]' valueBinding='Scheme' class="form-control"}}
+						</td>
+					</tr><br>
+                    <tr id='addr1'>
+                        <td>AMOUNT :</td>
+						<td>
+						{{input type="amt" name='name[]'  valueBinding='amt' class="form-control"}}
+						</td>
+						<td>
+						{{input type="amt" name='mail[]' valueBinding='amt' class="form-control"}}
+						</td>
+						<td>
+						{{input type="amt" name='mobile[]' valueBinding='amt' class="form-control"}}
+						</td>
+                    </tr><br>
+                         <tr id='addr2'>
+                        <td>DISTRICT DATES :</td>
+						<td>
+						{{input type="date" name='name[]'  valueBinding='date' class="form-control"}}
+						</td>
+						<td>
+						{{input type="date" name='mail[]' valueBinding='date' class="form-control"}}
+						</td>
+						<td>
+						{{input type="date" name='mobile[]' valueBinding='date' class="form-control"}}
+						</td>
+                    </tr>
+				</tbody>
+			</table>
+
+           <center> <button  type="button" id="myButton"class="btn btn-primary" {{action "transact"}}>Transact</button></center>
+		</div>
+
+   
+  
+	</div>
+  
+
+  
+  {{!-- <lable>ALLOCATE</lable> --}}
+  {{!-- {{input type="text" valueBinding='allocate' class="form-control"}}<br><br> --}}
+ 
+  
+
+
+</div>       
+                   
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+
+<script>
+    $(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $(".side-nav .collapse").on("hide.bs.collapse", function() {                   
+        $(this).prev().find(".fa").eq(1).removeClass("fa-angle-right").addClass("fa-angle-down");
+    });
+    $('.side-nav .collapse').on("show.bs.collapse", function() {                        
+        $(this).prev().find(".fa").eq(1).removeClass("fa-angle-down").addClass("fa-angle-right");        
+    });
+})   
+</script>
